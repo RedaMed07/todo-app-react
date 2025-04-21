@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #3b82f6, #9333ea);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 20px; /* Adjust padding to allow more space */
+    min-height: 400px;
+    width: 500px; /* Allow full width */
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 800px; /* Increase max width for larger screens */
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    margin: 5px 0;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+li:hover {
+    background-color: #e5e7eb;
+    transform: translateX(5px);
+}
+
+li::before {
+    content: '✔';
+    color: #10b981;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+label {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-top: 20px;
+    display: block;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+.input-group {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.input-group input[type="text"] {
+    flex: 1;
+    margin-right: 10px; /* Add spacing between input and button */
+}
+
+.input-group button {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #3b82f6, #9333ea);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.input-group button:hover {
+    background: linear-gradient(135deg, #2563eb, #7e22ce);
+    transform: scale(1.05);
+}
+
+.input-group .btn-add {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #3b82f6, #9333ea);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.input-group .btn-add:hover {
+    background: linear-gradient(135deg, #2563eb, #7e22ce);
+    transform: scale(1.05);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px; /* Reduce margin between inputs */
+    width: 100%; /* Ensure the form group takes full width */
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+.btn-add {
+    margin-top: 10px;
+}
+
+button.btn-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.btn-add:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+}
+
+button.btn-add i {
+    margin-right: 5px;
+    font-size: 1.2rem;
+}
+
+.deleteBtn {
+    padding: 8px 12px;
+    background-color: #ef4444; /* Red color for delete */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deleteBtn:hover {
+    background-color: #dc2626; /* Darker red on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.deleteBtn:active {
+    transform: scale(0.95); /* Slight shrink effect on click */
+}
+
+.deleteBtn i {
+    margin-right: 5px; /* Optional: Add spacing if using an icon */
+    font-size: 1rem;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #e0f2fe; /* Light blue background */
+    color: #0284c7; /* Darker blue text */
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 8px; /* Add spacing between task name and tag */
+    text-transform: capitalize; /* Capitalize the tag text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
