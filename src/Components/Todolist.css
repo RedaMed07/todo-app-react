@@ -21,9 +21,9 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
-    padding: 20px; /* Adjust padding to allow more space */
+    padding: 20px; 
     min-height: 400px;
-    width: 500px; /* Allow full width */
+    width: 500px; 
     margin: 50px auto;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -31,7 +31,7 @@ body {
 
 @media (min-width: 768px) {
     .container {
-        max-width: 800px; /* Increase max width for larger screens */
+        max-width: 800px; 
     }
 }
 
@@ -131,7 +131,7 @@ input[type="text"]:focus {
 
 .input-group input[type="text"] {
     flex: 1;
-    margin-right: 10px; /* Add spacing between input and button */
+    margin-right: 10px; 
 }
 
 .input-group button {
@@ -169,8 +169,8 @@ input[type="text"]:focus {
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px; /* Reduce margin between inputs */
-    width: 100%; /* Ensure the form group takes full width */
+    margin-bottom: 10px;
+    width: 100%; 
 }
 
 .form-group label {
@@ -224,7 +224,7 @@ button.btn-add i {
 
 .deleteBtn {
     padding: 8px 12px;
-    background-color: #ef4444; /* Red color for delete */
+    background-color: #ef4444; 
     color: #ffffff;
     border: none;
     border-radius: 6px;
@@ -237,28 +237,81 @@ button.btn-add i {
 }
 
 .deleteBtn:hover {
-    background-color: #dc2626; /* Darker red on hover */
-    transform: scale(1.05); /* Slight zoom effect */
+    background-color: #dc2626; 
+    transform: scale(1.05); 
 }
 
 .deleteBtn:active {
-    transform: scale(0.95); /* Slight shrink effect on click */
+    transform: scale(0.95); 
 }
 
 .deleteBtn i {
-    margin-right: 5px; /* Optional: Add spacing if using an icon */
+    margin-right: 5px; 
     font-size: 1rem;
 }
 
 .tag {
     display: inline-block;
-    background-color: #e0f2fe; /* Light blue background */
-    color: #0284c7; /* Darker blue text */
+    background-color: #e0f2fe; 
+    color: #0284c7; 
     font-size: 0.9rem;
     font-weight: 500;
     padding: 2px 8px;
     border-radius: 12px;
-    margin-left: 8px; /* Add spacing between task name and tag */
-    text-transform: capitalize; /* Capitalize the tag text */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-left: 8px; 
+    text-transform: capitalize; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+/* Add media query for phones */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        margin: 20px auto;
+        padding: 15px;
+        box-shadow: none; 
+        border-radius: 8px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 1.5rem; 
+    }
+
+    ul {
+        margin: 10px 0;
+    }
+
+    li {
+        padding: 8px 10px;
+        font-size: 0.9rem; 
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .input-group button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .deleteBtn {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    .tag {
+        font-size: 0.8rem;
+        padding: 2px 6px;
+    }
 }
