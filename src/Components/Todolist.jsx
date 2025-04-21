@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import "./Todolist.css";
 
 export default function Todolist() {
